@@ -33,10 +33,116 @@ animation/import_rest_as_RESET=false
 import_script/path=""
 _subresources={
 "nodes": {
+"PATH:Sketchfab_model/42952a9e192143b68c3310c2439c957d_fbx/RootNode/Box8424/Object_173/Box8424_window_glass_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/42952a9e192143b68c3310c2439c957d_fbx/RootNode/Cylinder001": {
+"import/skip_import": true
+},
+"PATH:Sketchfab_model/42952a9e192143b68c3310c2439c957d_fbx/RootNode/Object002/Object_131/Object002_Material #46_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/42952a9e192143b68c3310c2439c957d_fbx/RootNode/Object1738/Object_101/Object1738_ceramics_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/42952a9e192143b68c3310c2439c957d_fbx/RootNode/Plane005/Object_167/Plane005_plane_za_divanom_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/42952a9e192143b68c3310c2439c957d_fbx/RootNode/Ramki_2": {
+"import/skip_import": true
+},
+"PATH:Sketchfab_model/42952a9e192143b68c3310c2439c957d_fbx/RootNode/Sphere232/Object_215/Sphere232_Chrome1_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/42952a9e192143b68c3310c2439c957d_fbx/RootNode/Vaza_02": {
+"import/skip_import": true
+},
+"PATH:Sketchfab_model/42952a9e192143b68c3310c2439c957d_fbx/RootNode/armchair/Object_224/armchair_Material #36_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/42952a9e192143b68c3310c2439c957d_fbx/RootNode/bath_walls/Object_10/bath_walls_Material #39_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/42952a9e192143b68c3310c2439c957d_fbx/RootNode/ceeling/Object_67/ceeling_Material #50_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/42952a9e192143b68c3310c2439c957d_fbx/RootNode/chainik": {
+"import/skip_import": true
+},
+"PATH:Sketchfab_model/42952a9e192143b68c3310c2439c957d_fbx/RootNode/chair/Object_221/chair_Chrome1_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/42952a9e192143b68c3310c2439c957d_fbx/RootNode/chair001/Object_212/chair001_Chrome1_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/42952a9e192143b68c3310c2439c957d_fbx/RootNode/detal_0_6/Object_4/detal_0_6_vodootliv_0": {
+"import/skip_import": true
+},
+"PATH:Sketchfab_model/42952a9e192143b68c3310c2439c957d_fbx/RootNode/dining_table/Object_98/dining_table_Material #52_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/42952a9e192143b68c3310c2439c957d_fbx/RootNode/divan_brown_leather/Object_227/divan_brown_leather_Material #48_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/42952a9e192143b68c3310c2439c957d_fbx/RootNode/divan_white_cotton/Object_236/divan_white_cotton_Material #54_0": {
+"generate/physics": true
+},
 "PATH:Sketchfab_model/42952a9e192143b68c3310c2439c957d_fbx/RootNode/door_bath1/Object_242/door_bath1_Material #55_0": {
+"generate/physics": true,
 "physics/shape_type": 0
 },
+"PATH:Sketchfab_model/42952a9e192143b68c3310c2439c957d_fbx/RootNode/electric/Object_49/electric_Material #42_0": {
+"import/skip_import": true
+},
+"PATH:Sketchfab_model/42952a9e192143b68c3310c2439c957d_fbx/RootNode/entrance_door/Object_116/entrance_door_Material #56_0": {
+"generate/physics": true
+},
 "PATH:Sketchfab_model/42952a9e192143b68c3310c2439c957d_fbx/RootNode/floor/Object_61/floor_Material #57_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/42952a9e192143b68c3310c2439c957d_fbx/RootNode/journal": {
+"import/skip_import": true
+},
+"PATH:Sketchfab_model/42952a9e192143b68c3310c2439c957d_fbx/RootNode/kitchen_axor_stark_kitchen": {
+"import/skip_import": true
+},
+"PATH:Sketchfab_model/42952a9e192143b68c3310c2439c957d_fbx/RootNode/kitchen_clear/Object_64/kitchen_clear_Material #59_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/42952a9e192143b68c3310c2439c957d_fbx/RootNode/knopka_sliva": {
+"import/skip_import": true
+},
+"PATH:Sketchfab_model/42952a9e192143b68c3310c2439c957d_fbx/RootNode/lamp_above_table/Object_52/lamp_above_table_Material #43_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/42952a9e192143b68c3310c2439c957d_fbx/RootNode/otkosy001/Object_170/otkosy001_Material #62_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/42952a9e192143b68c3310c2439c957d_fbx/RootNode/outdoor_walls": {
+"import/skip_import": true
+},
+"PATH:Sketchfab_model/42952a9e192143b68c3310c2439c957d_fbx/RootNode/outdoor_walls/Object_40/outdoor_walls_Material #40_0": {
+"import/skip_import": true
+},
+"PATH:Sketchfab_model/42952a9e192143b68c3310c2439c957d_fbx/RootNode/outside_window": {
+"import/skip_import": true
+},
+"PATH:Sketchfab_model/42952a9e192143b68c3310c2439c957d_fbx/RootNode/outside_window/Object_43/outside_window_Material #44_0": {
+"import/skip_import": true
+},
+"PATH:Sketchfab_model/42952a9e192143b68c3310c2439c957d_fbx/RootNode/stellaj2/Object_83/stellaj2_Material #66_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/42952a9e192143b68c3310c2439c957d_fbx/RootNode/stolik/Object_95/stolik_stolik_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/42952a9e192143b68c3310c2439c957d_fbx/RootNode/stul_sidenie/Object_218/stul_sidenie_Material #68_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/42952a9e192143b68c3310c2439c957d_fbx/RootNode/stul_sidenie001/Object_209/stul_sidenie001_Material #67_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/42952a9e192143b68c3310c2439c957d_fbx/RootNode/walls_clear/Object_58/walls_clear_Material #38_0": {
 "generate/physics": true
 }
 }

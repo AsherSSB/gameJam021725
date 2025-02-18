@@ -5,6 +5,7 @@
 [ext_resource type="Script" path="res://scenes/fps_counter.gd" id="3_wt0da"]
 
 [node name="Node3D" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00169683, -0.0039475, 0.00350356)
 
 [node name="apartment" parent="." instance=ExtResource("1_d0qsv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.01733, 0, -1.32105)
