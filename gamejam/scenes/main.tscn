@@ -1,8 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://c828yvwhmlvbl"]
+[gd_scene load_steps=3 format=3 uid="uid://nbrd410s1os4"]
 
 [ext_resource type="PackedScene" uid="uid://bvtrxxuvc3hja" path="res://assets/apartment/studio_apartment_vray_baked_textures_included.glb" id="1_d0qsv"]
+[ext_resource type="PackedScene" uid="uid://dp0b34ket5wet" path="res://scenes/player.tscn" id="2_42wgr"]
 
 [node name="Node3D" type="Node3D"]
 
 [node name="apartment" parent="." instance=ExtResource("1_d0qsv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.01733, 0, -1.32105)
+
+[node name="Player" parent="." instance=ExtResource("2_42wgr")]
+transform = Transform3D(0.547979, 0, 0, 0, 0.547979, 0, 0, 0, 0.547979, -2.94657, 0.299102, 1.46076)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
