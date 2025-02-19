@@ -24,3 +24,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.60382, 0)
 
 [node name="Camera3D" type="Camera3D" parent="Head"]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 1.08726, 0)
+
+[node name="Interaction" type="RayCast3D" parent="Head/Camera3D"]
+target_position = Vector3(0, 0, -2)
+
+[node name="Hand" type="Marker3D" parent="Head/Camera3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00198221, 9.53674e-07, -1.89016)
