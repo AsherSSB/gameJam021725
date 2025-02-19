@@ -15,12 +15,28 @@ var t_bob = 0.0
 const BASE_FOV = 75.0
 const FOV_CHANGE = 1.5
 
+# grabbing variables
+var picked_object
+var pull_power = 4
+
 # sprint speed
 var speed
 @onready var head = $Head
 @onready var camera = $Head/Camera3D
+@onready var interaction = $Head/Camera3D/Interaction
+@onready var hand = $Head/Camera3D/Hand
 
+# pick objects function
+func pick_object():
+	var collider = interaction.get_collider()
+	# check if the raycast is colliding with something
+	if collider != null and collider is RigidBody3D:
+		print("Colling with rigid body")
+		picked_object = collider
 
+func remove_object():
+	if picked_object != null:
+		picked_object = null
 
 func _ready():
 	# removes the cursor from window
@@ -52,6 +68,12 @@ func _physics_process(delta: float) -> void:
 	else:
 		speed = WALK_SPEED
 
+	# interact button to grab
+	if Input.is_action_just_pressed("grab"):
+		if picked_object == null:
+			pick_object()
+		elif picked_object != null:
+			remove_object()
 	# Get the input direction and handle the movement/deceleration.
 	var input_dir := Input.get_vector("left", "right", "up", "down")
 	var direction = (head.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
@@ -82,6 +104,13 @@ func _physics_process(delta: float) -> void:
 	var velocity_clamped = clamp(velocity.length(), 0.5, SPRINT_SPEED * 2)
 	var target_fov = BASE_FOV + FOV_CHANGE * velocity_clamped
 	camera.fov = lerp(camera.fov, target_fov, delta * 8.0)
+	
+	# pulling object for grabbing
+	if picked_object != null:
+		# position of the object in relation to the hand calculation
+		var a = picked_object.global_transform.origin
+		var b = hand.global_transform.origin
+		picked_object.set_linear_velocity((b-a) * pull_power)
 	
 	move_and_slide()
 
