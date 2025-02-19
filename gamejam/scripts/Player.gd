@@ -55,7 +55,8 @@ func _physics_process(delta: float) -> void:
 		else:
 			interact_hint.visible = false
 	
-	if Input.is_action_just_pressed("interact") and result:
+	if Input.is_action_just_pressed("interact") and result.collider.has_method("on_ray_hit"):
+		result.collider.on_ray_hit()
 		# pick up collider
 		pass
 	
