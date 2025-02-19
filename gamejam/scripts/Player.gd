@@ -15,12 +15,14 @@ var t_bob = 0.0
 const BASE_FOV = 75.0
 const FOV_CHANGE = 1.5
 
+# fov constant interaction raycast
+const RAY_LENGTH = 10.0
+
 # sprint speed
 var speed
 @onready var head = $Head
 @onready var camera = $Head/Camera3D
-
-
+@onready var interact_hint = $"../PlayerUI/interact_hint"
 
 func _ready():
 	# removes the cursor from window
@@ -38,6 +40,25 @@ func _unhandled_input(event):
 		camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-40), deg_to_rad(60))
 		
 func _physics_process(delta: float) -> void:
+	var mouse_position = get_viewport().get_mouse_position()
+	var space_state = get_world_3d().direct_space_state
+	var origin = camera.project_ray_origin(mouse_position)
+	var end = origin + camera.project_ray_normal(mouse_position) * RAY_LENGTH
+	var query = PhysicsRayQueryParameters3D.create(origin, end)
+	query.collide_with_areas = true
+	
+	var result = space_state.intersect_ray(query)
+	if result:
+		var collider = result.collider
+		if collider.has_method("on_ray_hit"):
+			interact_hint.visible = true
+		else:
+			interact_hint.visible = false
+	
+	if Input.is_action_just_pressed("interact") and result:
+		# pick up collider
+		pass
+	
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
