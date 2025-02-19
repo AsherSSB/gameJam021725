@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://nbrd410s1os4"]
+[gd_scene load_steps=6 format=3 uid="uid://c828yvwhmlvbl"]
 
 [ext_resource type="PackedScene" uid="uid://bvtrxxuvc3hja" path="res://assets/apartment/studio_apartment_vray_baked_textures_included.glb" id="1_d0qsv"]
-[ext_resource type="PackedScene" uid="uid://dp0b34ket5wet" path="res://scenes/player.tscn" id="2_42wgr"]
+[ext_resource type="PackedScene" uid="uid://qmt0yeagyfsq" path="res://scenes/player.tscn" id="2_42wgr"]
 [ext_resource type="Script" path="res://scenes/fps_counter.gd" id="3_wt0da"]
+[ext_resource type="PackedScene" uid="uid://coi72ka0bk13n" path="res://assets/flowers_in_vase.glb" id="4_jvudo"]
+[ext_resource type="Script" path="res://scripts/static_body_3d.gd" id="5_lrjuo"]
 
 [node name="Node3D" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00169683, -0.0039475, 0.00350356)
@@ -20,3 +22,27 @@ offset_right = 38.0
 offset_bottom = 26.0
 scale = Vector2(4, 4)
 script = ExtResource("3_wt0da")
+
+[node name="interact_hint" type="Label" parent="PlayerUI"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -138.0
+offset_top = -24.0
+offset_right = 6.0
+offset_bottom = 7.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+text = "press F to interact"
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("4_jvudo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.18935, 0.719762, -2.36776)
+
+[node name="StaticBody3D" parent="Sketchfab_Scene/Sketchfab_model/Scaniverse_obj_cleaner_materialmerger_gles/Object_2" index="0"]
+script = ExtResource("5_lrjuo")
+
+[editable path="apartment"]
+[editable path="Sketchfab_Scene"]
