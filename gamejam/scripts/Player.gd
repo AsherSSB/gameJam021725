@@ -52,9 +52,12 @@ func _physics_process(delta: float) -> void:
 		var collider = result.collider
 		if collider.has_method("on_ray_hit"):
 			interact_hint.visible = true
-			collider.on_ray_hit()
 		else:
 			interact_hint.visible = false
+	
+	if Input.is_action_just_pressed("interact") and result:
+		# pick up collider
+		pass
 	
 	# Add the gravity.
 	if not is_on_floor():
